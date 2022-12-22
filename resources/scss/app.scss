@@ -1,0 +1,189 @@
+@use 'partials/variables.scss' as *;
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: rgb(12,12,12);
+  color:white;
+}
+
+img{
+  max-width:100%;
+}
+
+.container{
+  width:65%;
+  margin:0 auto;
+}
+
+.d-flex{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul{
+  list-style: none;
+}
+
+
+header{
+    background-color: white;
+    height:100px;
+    .logo{
+      padding:8px;
+      width:20%;
+      height:100%;
+      img{
+          max-height:80px;
+      }
+    }
+    nav{
+      height:100%;
+      width:80%;
+      ul{
+      list-style: none;
+      height:100%;
+      li{
+        display:flex;
+        align-items:center;
+        margin-left:18px;
+        height:100%;
+        border-bottom:4px solid white;
+        &:hover , &.active{
+            border-bottom:4px solid $primary-blue;
+          }
+        &:hover a{
+          color:$primary-blue;
+        }
+        a{
+          text-decoration: none;
+          color:$primary-grey;
+          text-transform: uppercase;
+          font-size:80%;
+          font-weight: bold;
+         }
+      }}}
+}
+
+.jumbo{
+    width:100%;
+    height:400px;
+    background-image: url('../img/jumbotron.jpg');
+}
+
+
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding:50px auto;
+    background-color: $primary-black;
+    width:70%;
+    margin:0 auto;
+    .title{
+        margin:0 auto;
+        width:100%;
+        h2{
+          font-size:1.5rem;
+          display:inline-block;
+          padding:8px 12px;
+          background-color: $primary-blue;
+          text-align:center;
+          position:relative;
+          top:-22px;
+      }
+      }
+    .btn-load{
+      margin:0 auto;
+      margin-top:20px;
+      button{
+        background-color: $primary-blue;
+        text-transform: uppercase;
+        padding:5px 8px;
+        font-size:90%;
+        color:white;
+        border:none;
+        &:hover{
+          cursor:pointer;
+        }
+      }
+    }
+}
+
+
+.dc-card{
+    width:calc(100% / 6);
+    display:flex;
+    padding:6px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+        img{
+          width:calc(100%);
+          object-fit: cover;
+          aspect-ratio: 1 / 1.5;
+          object-position: top;
+        }
+      .card-body{
+        margin:3px 0 10px;
+        overflow: hidden;
+        padding:2px;
+        text-transform: uppercase;
+        font-size:85%;
+        text-overflow:ellipsis;
+        width:calc(100% - 12px);
+        white-space: nowrap;
+        }
+      .cover-thumb{
+        position:absolute;
+        top:0;
+        left:0;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255,255,255,0.6);
+        width:100%;
+        height:calc(100% - 4px);
+      a{color:white;
+        margin-top:5px;
+        padding:5px 8px;
+        font-size:80%;
+        border:none;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover{
+          text-decoration: underline;
+          cursor:pointer;}
+        &:first-of-type{
+        background-color: $primary-blue;
+        }
+        &:last-of-type{
+        background-color: $primary-grey;
+        }
+      }
+      span{
+        color:$primary-grey;
+        background-color: rgba(255,255,255,0.8);
+        padding:5px;
+        box-shadow: 2px 2px 3px $primary-grey;;
+      }
+      }
+  }
+
+
+  main{
+      font-size:200%;
+      text-align:center;
+      color:pink;
+      padding:100px;
+  }
+
+
