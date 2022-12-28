@@ -1,14 +1,3 @@
-@extends('layouts.main')
-
-@section('jumbo')
-    <section class="jumbo"></section>
-@endsection
-
-@section('content')
-   <main>TV</main>
-@endsection
-
-@section('page-strip')
 <section class="page-strip grey">
     <div class="sections-container h-100">
         <div class="container-fluid h-100">
@@ -33,4 +22,3 @@
         </div>
     </div>
 </section>
-@endsection

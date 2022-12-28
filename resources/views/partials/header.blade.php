@@ -1,20 +1,33 @@
 <header>
-    <div class="container d-flex">
-      <div class="logo">
-        <a href="{{route('home')}}"><img src="{{asset('img/dc-logo.png')}}" alt="DC Logo"></a>
+    <div class="container d-flex h-100 p-0">
+      <div class="logo p-0">
+        <a href="{{route('home')}}"><img src="{{asset('img/dc-logo.png')}}" alt="DC Logo" class="d-flex align-items-center"></a>
       </div>
       <nav>
-        <ul class="d-flex">
-          <li><a class="{{Route::currentRouteName()=='characters' ? 'active' :''}} }}" href="{{route('characters')}}">Characters</a></li>
-          <li><a class="{{Route::currentRouteName()=='comics' ? 'active' :''}} }}" href="{{route('comics')}}">Comics</a></li>
-          <li><a class="{{Route::currentRouteName()=='movies' ? 'active' :''}} }}" href="{{route('movies')}}">Movies</a></li>
-          <li><a class="{{Route::currentRouteName()=='tv' ? 'active' :''}} }}" href="{{route('tv')}}">TV</a></li>
-          <li><a href="#"class="{{Route::currentRouteName()=='games' ? 'active' :''}} }}" href="{{route('games')}}">Games</a></li>
-          <li><a href="#"class="{{Route::currentRouteName()=='collectibles' ? 'active' :''}} }}" href="{{route('collectibles')}}">Collectibles</a></li>
-          <li><a class="{{Route::currentRouteName()=='videos' ? 'active' :''}} }}" href="{{route('videos')}}">Videos</a></li>
-          <li><a class="{{Route::currentRouteName()=='fans' ? 'active' :''}} }}" href="{{route('fans')}}">Fans</a></li>
-          <li><a class="{{Route::currentRouteName()=='news' ? 'active' :''}} }}" href="{{route('news')}}">News</a></li>
-          <li><a class="{{Route::currentRouteName()=='shop' ? 'active' :''}} }}" href="{{route('shop')}}">Shop</a></li>
+        <ul class="d-flex align-items-center">
+          <li class="{{Route::currentRouteName()=='characters' ? 'active' :''}}" ><a href="{{route('characters')}}">Characters</a></li>
+          <li class="{{Route::currentRouteName()=='comics' || Route::currentRouteName()=='comic-details' ? 'active' :''}}">
+            <a href="{{route('comics')}}">Comics</a></li>
+          <li class="{{Route::currentRouteName()=='movies' ? 'active' :''}}">
+            <a href="{{route('movies')}}">Movies</a></li>
+          <li class="{{Route::currentRouteName()=='tv' ? 'active' :''}}">
+            <a href="{{route('tv')}}">TV</a></li>
+          <li class="{{Route::currentRouteName()=='games' ? 'active' :''}}">
+            <a href="{{route('games')}}">Games</a></li>
+          <li class="{{Route::currentRouteName()=='collectibles' ? 'active' :''}}">
+            <a href="{{route('collectibles')}}">Collectibles</a></li>
+          <li class="{{Route::currentRouteName()=='videos' ? 'active' :''}}">
+            <a href="{{route('videos')}}">Videos</a></li>
+          <li class="{{Route::currentRouteName()=='fans' ? 'active' :''}}">
+            <a href="{{route('fans')}}">Fans</a></li>
+          <li class="{{Route::currentRouteName()=='news' ? 'active' :''}}">
+            <a href="{{route('news')}}">News</a></li>
+          <li class="{{Route::currentRouteName()=='shop' ? 'active' :''}}">
+            <a href="{{route('shop')}}">Shop</a></li>
+          <li class="mag-link-head d-flex">
+            <span><i class="bi bi-search"></i>
+            </span>
+            <input type="search" name="search-within-site" id="search-within-site" class="mag-hidden" placeholder="Search..."></li>
         </ul>
       </nav>
     </div>
